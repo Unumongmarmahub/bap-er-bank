@@ -27,29 +27,59 @@
       <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white ">
         <div class="bg-green-400 p-8 rounded-xl">
           <h2 class="text-2xl">Deposit</h2>
-          <h4 class="text-5xl">$00</h4>
+          <h4 class="text-5xl">$<span id="deposit_total">00</span></h4>
         </div>
         <!-- End Deposit Part  -->
 
         <!-- Start Withdraw Part -->
         <div class="bg-yellow-400 p-8 rounded-xl">
           <h2 class="text-2xl">Withdraw</h2>
-          <h4 class="text-5xl">$00</h4>
+          <h4 class="text-5xl">$<span id="withdraw_total">00</span></h4>
         </div>
         <!-- End Withdraw Part -->
 
         <!-- Start Balance Part  -->
         <div class="bg-violet-500 p-8 rounded-xl">
           <h2 class="text-2xl">Balance</h2>
-          <h4 class="text-5xl">$1240</h4>
+          <h4 class="text-5xl">$<span id="balance_total">1240</span></h4>
         </div>
         <!-- End Balance Part  -->
       </div>
+    </section>
+    <!-- Start Deposit and Withdarw Part  -->
+    <section class="mt-12">
+      <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
+        <!-- Start Deposit Part  -->
+        <div class="bg-purple-500 p-8 rounded-xl">
+          <h2 class="text-2xl mb-4 text-white">Please Deposit Your Money</h2>
+          <input class="w-9/12 block mb-2 px-3" type="text" name="" id="deposit-field"
+            placeholder="$ Amount you want to Deposit">
+          <button id="btn_dposit"
+            class="bg-amber-600 hover:bg-sky-700 px-7 py-2 text-white font-medium rounded-lg">Deposit</button>
+        </div>
+        <!-- End Deposit Part  -->
+
+        <!-- Start Withdraw Part -->
+        <div class="bg-fuchsia-400 p-8 rounded-xl">
+          <h2 class="text-2xl mb-4 text-white">Please Withdraw Your Money</h2>
+          <input id="withdraw_field" class="w-9/12 block mb-2 px-3" type="text" name="" id="user_email"
+            placeholder="$ Amount you want to Withdarw">
+          <button id="btn_withdraw"
+            class="bg-amber-600 hover:bg-sky-700 px-7 py-2 text-white font-medium rounded-lg">Withdarw</button>
+        </div>
+        <!-- End Withdraw Part -->
+      </div>
 
     </section>
+
+
+    <!-- End Deposit and Withdarw Part  -->
+
   </main>
   <!-- Start Main Seciton  -->
   <script src="js/login.js"></script>
+  <script src="js/deposit.js"></script>
+  <script src="js/withdraw.js"></script>
 </body>
 
 </html>
