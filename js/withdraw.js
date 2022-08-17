@@ -17,24 +17,39 @@ document.getElementById('btn_withdraw').addEventListener('click', function () {
   const withdrawField = document.getElementById('withdraw_field');
   const newWithdrawAmountString = withdrawField.value;
   const newWithdrawAmount = parseFloat(newWithdrawAmountString);
+
+  // Step 7
+  withdrawField.value = '';
+
+  if (isNaN(newWithdrawAmount)) {
+    alert('Please porvide a valid number');
+    return;
+  }
   // Step 3
   const WithdrawTotalElement = document.getElementById('withdraw_total');
   const previousWithdrawTotalString = WithdrawTotalElement.innerText;
   const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
-  // Step 4
-  const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-  WithdrawTotalElement.innerText = currentWithdrawTotal;
+
   // Step 5 
   const ballanceTotalElement = document.getElementById('balance_total');
   const previousBalanceTotalString = ballanceTotalElement.innerText;
   const previousBalanceTotal = parseFloat(previousBalanceTotalString);
 
+
+
+  if (newWithdrawAmount > previousBalanceTotal) {
+    alert('Baap er Bank a ato tk nai ');
+    return;
+  }
+  // Step 4
+  const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+  WithdrawTotalElement.innerText = currentWithdrawTotal;
+
   // Step 6
   const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
   ballanceTotalElement.innerText = newBalanceTotal;
 
-  // Step 7
-  withdrawField.value = '';
+
 
 })
