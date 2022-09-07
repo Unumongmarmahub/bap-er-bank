@@ -39,7 +39,7 @@ document.getElementById('btn_withdraw').addEventListener('click', function () {
 
 
   if (newWithdrawAmount > previousBalanceTotal) {
-    alert('Baap er Bank a ato tk nai ');
+    alert('WannuChing Marama Tomar Bank a ato Tk nai');
     return;
   }
   // Step 4

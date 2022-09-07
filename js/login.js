@@ -1,8 +1,8 @@
 
-// step: 1 add click event handler with sumbit button 
+// step: 1 add click event handler with the submit button 
 document.getElementById('btn_submit').addEventListener('click', function () {
-  // step: 2 get the email adress inside the email input feild 
-  // always remamber to use .value to get text form an input feild 
+  // step: 2 get the email address inside the email input feild 
+  // always remamber to use (dot).value to get text form an input feild 
   const emailFild = document.getElementById('user_email');
   const email = emailFild.value;
   // step: 3 get passward 
@@ -12,7 +12,7 @@ document.getElementById('btn_submit').addEventListener('click', function () {
   const passwarField = document.getElementById('user_passward');
   const passward = passwarField.value;
   // Danger: DO NOT VERYFY email passward on the clint side
-  // step:4 veryfy and email passward 
+  // step:4 veryfy email and passward and check whether valid user or not 
   if (email === 'sontan@gmail.com' && passward === 'secret') {
     window.location.href = 'bank.html';
   }
